@@ -1,6 +1,6 @@
 {
   "name": "@jangdoyeon/calc-etag",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Calculating AWS S3 eTag for local file using node.js",
   "main": "calc-etag.js",
   "type": "module",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/jangdoyeon/calc-etag.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@jangdoyeon"
+    "registry": "https://npm.pkg.github.com/jangdoyeon"
   },
   "author": "jangdoyeon",
   "license": "ISC",
