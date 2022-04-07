@@ -11,7 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/jangdoyeon/calc-etag.git"
   },
-  "author": "",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@jangdoyeon"
+  },
+  "author": "jangdoyeon",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jangdoyeon/calc-etag/issues"
