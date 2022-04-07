@@ -50,4 +50,13 @@ export function getEtagFromLocalFile(filePath, callback) {
   });
 }
 
-getEtagFromLocalFile('README.md');
+function seperateFileName(fullPath) {
+  return path.basename(fullPath);
+}
+// example - calculate 'README.md' eTag
+
+const testPath =
+  '/Users/doyeon/dev/python/autobackup/backup-data/202203/SecurityDevices';
+// getEtagFromLocalFile(testPath);
+
+// 테스트 경로: /Users/doyeon/dev/python/autobackup/backup-data/202203/NetworkDevices/Office-INT_BB_A-192.168.110.252-config-20220320.txt
