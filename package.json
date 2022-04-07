@@ -12,7 +12,7 @@
     "url": "git+https://github.com/jangdoyeon/calc-etag.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/jangdoyeon"
+    "registry": "https://npm.pkg.github.com/@jangdoyeon"
   },
   "author": "jangdoyeon",
   "license": "ISC",
