@@ -1,11 +1,14 @@
+/**
+ * @author yeon
+ */
 import { createReadStream, statSync } from 'fs';
 import { createHash } from 'crypto';
 import path from 'path';
 
 /**
- * calculating S3 eTag for local file
- * @param {String} filePath Local file path
- * @param {callback} callback
+ * calculating S3 eTag from local file
+ * @param {string} filePath Local file path
+ * @param {({name: string, eTag: string}) => void} callback
  */
 export function getEtagFromLocalFile(filePath, callback) {
   const waterMarkSize = 8 * 1024 * 1024; // aws multipart upload part size : 8MB
@@ -54,9 +57,4 @@ function seperateFileName(fullPath) {
   return path.basename(fullPath);
 }
 // example - calculate 'README.md' eTag
-
-const testPath =
-  '/Users/doyeon/dev/python/autobackup/backup-data/202203/SecurityDevices';
-// getEtagFromLocalFile(testPath);
-
-// 테스트 경로: /Users/doyeon/dev/python/autobackup/backup-data/202203/NetworkDevices/Office-INT_BB_A-192.168.110.252-config-20220320.txt
+getEtagFromLocalFile('README.md', ({ name, eTag }) => console.log(name, eTag));
