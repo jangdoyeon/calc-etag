@@ -1,5 +1,5 @@
 {
-  "name": "calc-etag",
+  "name": "@jangdoyeon/calc-etag",
   "version": "1.0.0",
   "description": "Calculating AWS S3 eTag for local file using node.js",
   "main": "calc-etag.js",
