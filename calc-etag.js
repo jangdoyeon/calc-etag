@@ -36,18 +36,16 @@ export function getEtagFromLocalFile(filePath, callback) {
 
     if (inPartSize) {
       eTag = md5sum.digest('hex');
-      console.log(`In PartSize ${filePath} eTag: ${eTag}`);
-      const resData = await callback({ name, eTag });
-      console.log(resData);
+      console.log(`[In PartSize] Filename: ${filePath} eTag: ${eTag}`);
+      await callback({ name, eTag });
     } else {
       const md5sumConcat = createHash('MD5');
       const genRes = md5sumConcat
         .update(Buffer.concat(dataChunks))
         .digest('hex');
       eTag = `${genRes}-${count}`;
-      console.log(`Over PartSize ${filePath} eTag: ${eTag}`);
-      const resData = await callback({ name, eTag });
-      console.log(resData);
+      console.log(`[Over PartSize] Filename: ${filePath} eTag: ${eTag}`);
+      await callback({ name, eTag });
     }
     return eTag;
   });
@@ -57,4 +55,4 @@ function seperateFileName(fullPath) {
   return path.basename(fullPath);
 }
 // example - calculate 'README.md' eTag
-getEtagFromLocalFile('README.md', ({ name, eTag }) => console.log(name, eTag));
+getEtagFromLocalFile('README.md', ({ name, eTag }) => {});
