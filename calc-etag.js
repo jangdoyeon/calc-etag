@@ -50,8 +50,8 @@ export function getEtagFromLocalFile(filePath, callback) {
     return eTag;
   });
   stream.on('error', (err) => {
-    throw new Error('createReadStream error..')
-  }
+    throw new Error('createReadStream error..');
+  });
 }
 
 function seperateFileName(fullPath) {
