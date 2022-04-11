@@ -54,5 +54,3 @@ export function getEtagFromLocalFile(filePath, callback) {
 function seperateFileName(fullPath) {
   return path.basename(fullPath);
 }
-// example - calculate 'README.md' eTag
-getEtagFromLocalFile('README.md', ({ name, eTag }) => {});
